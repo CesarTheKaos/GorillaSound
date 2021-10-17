@@ -1,0 +1,81 @@
+<!--<?php
+
+    session_start();
+
+    if(!isset($_SESSION['user'])){
+        $message = "Iniciar Sesion";
+    }else{
+        $message = "Perfil";
+    }
+
+?>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/GorillaSoundLogo.ico">
+    <title>Gorilla Sound</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="btn">
+                <a href="Inicio/Inicio.html">Inicio</a>
+            </div>
+            <div class="btn">
+                <?php if($message=="Iniciar Sesion"):?>
+                    <a href="Iniciar_Sesion/Iniciar_Sesion.html"><?= $message ?></a>
+                <?php else: ?>
+                <a href="Perfil/Perfil.php"><?= $message ?></a>
+                <?php endif;?>
+            </div>
+        </div>
+    </header>
+    <main class="master-container">
+        <section class="first">
+            <h1 class="title">Gorilla Sound</h1>
+            <div class="image"><img src="assets/GorillaSoundLogo.png" alt="GorillaSoundLogo"></div>
+            <p class="slogan">Sin musica,la vida seria un error</p>
+        </section>
+        <section class="second">
+            <h2 class="about">Nosotros</h2>
+            <h3>Historia</h3>
+            <p>GorillaSound nace de nuestra necesidad de usar musica libre de copyrigth para proyectos escolares y personales, en un intento por desarrollar nuestra creatividad creando contenido audiovisual nos encontramos con el problema de que hay mucha musica en internet que alardea de ser libre de copyrigth pero en verdad no lo es; es entonces que creamos GorillaSound.</p> <br>
+            <h3>Objetivo</h3>
+            <p>Somos un empresa dedicada al <i>almacenamiento, distribución y reproducción</i>  de canciones de artistas independientes <i>sin fines de lucro</i>. El objetivo principal de esta pagina es brindarle a los artistas independientes el medio para poder dar a conocer sus canciones, sin ponerles restricciones ni tantos requisitos para poder subir su musica. Ademas brindamos un servicio de reproducción de musica Streaming para poder disfrutar de la musica de los creadores, <i>sin costo alguno</i>.</p>
+        </section>
+        <section class="third">
+                <h2>Creamos un espacio unico, sin comparación.</h2>
+                <p>Perfecto para compartir tu musica con el mundo.</p>
+                <div class="container-div-third">
+                    <article class="card-1">
+                        <span class="clock"><img src="assets/iconos/ojo/1x/outline_visibility_white_24dp.png" alt="Expocisión para música en redes sociales"></span>
+                        <h4>Red Social</h4>
+                        <p class="text-card">Nuestra pagina es una de las mejores y mas grandes redes sociales, dirigidas a la musica independiente y libre de copyrigth. Si eres un artista y quieres compartir tu musica sin fines de lucro puedes hacerlo aqui. ¡Todos son libres de subir su musica!</p>
+                    </article>
+                    <article class="card-2">
+                        <span class="clock"><img src="assets/iconos/banco/1x/outline_account_balance_white_24dp.png" alt="Ganar dinero por tu musica"></span>
+                        <h4>Sistema De Propinas Para Los Autores</h4>
+                        <p class="text-card">Contamos con un sistema de donaciones para los autores de las canciones. ¡Las personas pueden donarte por tu gran trabajo!</p>
+                    </article>
+                    <article class="card-3">
+                        <span class="clock"><img src="assets/iconos/musica/1x/outline_library_music_white_24dp.png" alt=""></span>
+                        <h4>Repositorio De Música Libre De Copyrigth</h4>
+                        <p class="text-card">Nuestra pagina es una de las mejores y mas grandes redes sociales dirigidas a la musica independiente libre de copyrigth.</p>
+                    </article>
+                    <article class="card-4">
+                        <span class="clock"><img src="assets/iconos/estrella/1x/outline_star_white_24dp.png" alt="Reconocimiento por tu musica"></span>
+                        <h4>Reconocimiento Por Tu Trabajo</h4>
+                        <p class="text-card">En GorillaSound te aseguramos que recibiras el reconocimiento y credito de terceros y nosotros por el uso de tus canciones.</p>
+                    </article>
+                </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

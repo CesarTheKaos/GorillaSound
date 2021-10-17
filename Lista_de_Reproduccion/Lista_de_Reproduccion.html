@@ -1,0 +1,128 @@
+<!--<?php
+
+    session_start();
+
+    if(!isset($_SESSION['user'])){
+        header("Location: ../Iniciar_Sesion/Iniciar_Sesion.php");
+    }
+
+?>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Gorilla Sound - Inicio</title>
+    <script src="https://kit.fontawesome.com/264e1a2102.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <header>
+        <div class="header">
+            <div class="menu-img">
+                <i class="fas fa-bars" id="btn_open"></i>
+            </div>
+        </div>
+        <h1>Gorilla Sound</h1>
+        <div id="search">
+                    <form action="" method="post">
+                        <input type="text" name="search" id="searchB">
+                        <button type="submit" class="btn_search"><i class="fas fa-search" title="Buscar"></i></button>
+                    </form>
+                </div>
+    </header>
+    <div class="menu" id="menu">
+
+        <div class="namepage">
+            <div class="img" id="logo">
+                <img src="assets/GorillaSoundLogo.png" alt="GorillaSounds">
+            </div>
+        </div>
+
+        <div class="options">
+
+
+            <a href="../Inicio/Inicio.php">
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+
+            <a href="../Perfil/Perfil.php">
+                <div class="option">
+                    <i class="far fa-user" title="Perfil"></i>
+                    <h4>Perfil</h4>
+                </div>
+            </a>
+
+            <a href="../Artistas/Artistas.php">
+                <div class="option">
+                <i class="fas fa-users" title="Artistas"></i>
+                    <h4>Artistas</h4>
+                </div>
+            </a>
+
+            <a href="../Generos/Generos.php">
+                <div class="option">
+                <i class="fas fa-guitar" title="Generos"></i>
+                    <h4>Generos</h4>
+                </div>
+            </a>
+
+            <a href="../Lista_de_Reproduccion/Lista_de_Reproduccion.php" class="select">
+                <div class="option">
+                    <i class="fas fa-compact-disc" title="Lista de Reproduccion"></i>
+                    <h4>Lista de Reproduccion</h4>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <main>
+        <h2 class="title">PlayList</h2>
+        <div class="container-list">
+
+        </div>
+
+        <div class="container-controls">
+            <article class="boton-controls">
+                <button class="btnReproductor" type="button"><img class="btnReproductorImg" src="./assets/IconosGS/backIcon.png" alt=""></button>
+                <button class="btnReproductor" type="button"><img class="btnReproductorImg" src="./assets/IconosGS/playIcon.png" alt=""></button>
+                <button class="btnReproductor" type="button"><img class="btnReproductorImg" src="./assets/IconosGS/pauseIcon.png" alt=""></button>
+                <button class="btnReproductor" type="button"><img class="btnReproductorImg" src="./assets/IconosGS/nextIcon.png" alt=""></button>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-contact">
+            <h3 class="contactaConNosotros">Contacta con nosotros</h3>
+            <article class="contact-1">
+                <a class="igUser" target="_blank" href="https://instagram.com/01000011.01010011?utm_medium=copy_link"><img class="igLogo" src="../assets/iconos/ig_logo.png" alt="">@01000011.01010011</a>
+            </article>
+
+            <article class="contact-2">
+                <a class="igUser" target="_blank" href="https://instagram.com/leviathan0101100101?utm_medium=copy_link"><img class="igLogo" src="../assets/iconos/ig_logo.png" alt="">@leviathan0101100101</a>
+            </article>
+
+            <article class="contact-3">
+                <a class="igUser" target="_blank" href="https://instagram.com/luism_gc15?utm_medium=copy_link"><img class="igLogo" src="../assets/iconos/ig_logo.png" alt="">@luism_gc15</a>
+            </article>
+
+            <article class="contact-4">
+                <a class="igUser" target="_blank" href="https://instagram.com/lenin_q?utm_medium=copy_link"><img class="igLogo" src="../assets/iconos/ig_logo.png" alt="">@lenin_q</a>
+            </article>
+
+            <article class="contact-5">
+                <a class="igUser" target="_blank" href="https://instagram.com/_gustavo_zarco?utm_medium=copy_link"><img class="igLogo" src="../assets/iconos/ig_logo.png" alt=""> @_gustavo_zarco</a>
+            </article>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

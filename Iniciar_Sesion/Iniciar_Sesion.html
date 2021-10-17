@@ -1,0 +1,61 @@
+<!--<?php
+    $message = "";
+
+    session_start();
+
+    include ("database.php");
+    if(isset($_POST['in'])){
+    if(strlen($_POST['user']) >= 1 && strlen($_POST['pass']) >= 1){
+
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    $pass = hash('sha512',$pass);
+
+    $validateU = mysqli_query($conex, "SELECT * FROM users WHERE user='$user'");
+
+    if(mysqli_num_rows($validateU) > 0){
+        $validateP = mysqli_query($conex, "SELECT * FROM users WHERE pass='$pass'");
+        if($pass = mysqli_fetch_assoc($validateP)){
+            $_SESSION['user'] = $user;
+            header("location: ../index.php");
+        }else{
+            $message = "Contraseña incorrecta";
+        }
+    }else{
+        $message = "Usuario incorrecto o inexistente";
+    }
+}else{
+    $message = "Uno o mas valores son invalidos!!";
+}
+}
+?>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/GorillaSoundLogo.ico">
+    <title>Iniciar Sesion</title>
+</head>
+<body>
+        <div class="container">
+            <div class="login">
+                <h1 class="title">Iniciar Sesion</h1>
+                <form action="Iniciar_Sesion.php" method="POST" class="inputs">
+                    <input name="user" class="input" type="text" placeholder="Usuario" minlength="3" maxlength="20">
+                    <input name="pass" class="input" type="password" placeholder="Contraseña" minlength="6" maxlength="18">
+                    <input name="in" class="btn" type="submit" value="Ingresar">
+                    <p>¿No tienes cuenta? <a href="Registro.php" class="register">Registarse</a></p>
+                </form>
+                <?php if(!empty($message)):?>
+                    <p class="msg"> <?= $message ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="logo">
+                <a href="../index.php"><img src="assets/GorillaSoundLogo.png" alt="GorillaSound" class="imgL"></a>
+            </div>
+        </div>
+</body>
+</html>

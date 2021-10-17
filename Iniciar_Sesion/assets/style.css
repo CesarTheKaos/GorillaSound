@@ -1,0 +1,185 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap');
+
+body{
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(150deg, #fc4a1e , #f58925 , #f8ff30);
+    background-size: 400% 300%;
+    animation: BgGradient 5s ease infinite;
+}
+
+@keyframes BgGradient{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+
+}
+
+.container{
+    width: 60em;
+    height: 40.5em;
+    display: flex;
+    flex-direction: row;
+    margin: 3em auto;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.login{
+    background-color: #111;
+    color: #FFF;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.title{
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 3rem;
+
+}
+.inputs{
+    height: 55%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input{
+    width: 90%;
+    height: 3.2rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+.term{
+    display: inline;
+    font-size: 12px;
+}
+
+.btn{
+    width: 80%;
+    height: 3rem;
+    background-color: #fff;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inputs > p{
+    font-size: 1.125rem;
+}
+
+.register{
+    color: #fc4a1e;
+    text-decoration-line: none;
+}
+label > a{
+    color: #fc4a1e;
+    text-decoration-line: none;
+}
+
+.msg{
+    margin: 10px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.logo{
+    display: flex;
+    background-color: #FFF;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.imgL{
+    width: 100%;
+}
+
+@media screen and (max-width: 970px) {
+    .container{
+        flex-direction: column;
+        width: 80%;
+        height: 80vh;
+    }
+
+    .login{
+        width: 100%;
+        height: 60%;
+    }
+
+    .title{
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .inputs{
+        padding: 0px;
+        height: 100%;
+    }
+
+    .logo{
+        width: 100%;
+        height: 40%;
+    }
+
+    .imgL{
+        display: block;
+        margin: auto;
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        width: 95%;
+        height: 100vh;
+        margin: 1em auto;
+    }
+
+    .login{
+        width: 100%;
+        height: 80%;
+    }
+
+    .logo{
+        width: 100%;
+        height: 20%;
+    }
+
+    .title{
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 1rem;
+    }
+
+    .imgL{
+        width: 40%;
+    }
+}
