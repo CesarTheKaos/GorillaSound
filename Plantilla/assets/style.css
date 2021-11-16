@@ -314,83 +314,59 @@ hr{
 /*Footer*/
 
 footer{
-    height: 45vh;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-image: linear-gradient(150deg, #fc4a1e , #f58925 , #f8ff30);
     background-size: 400% 300%;
     animation: BgGradient 5s ease infinite;
 }
 
-.container-contact{
-    width: 30%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: "contactaConNosotros"
-                        "contact-1"
-                        "contact-2"
-                        "contact-3"
-                        "contact-4"
-                        "contact-5";
+.content__footer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25rem;
 }
 
-.contactaConNosotros{
-    color: white;
-    font-weight: bold;
+.content__footer .bloque{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+}
+
+.bloque a{
+    color: black;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    padding-left: 5%;
+}
+
+.bloque a:hover{
+    text-decoration: underline;
+}
+
+.footer-icon{
     font-size: 2rem;
 }
 
-.container-contact > .contact-1{
-    display: flex;
-    align-items: center;
-    grid-area: contact-1;
-}
-.container-contact > .contact-2{
-    display: flex;
-    align-items: center;
-    grid-area: contact-2;
-}
-.container-contact > .contact-3{
-    display: flex;
-    align-items: center;
-    grid-area: contact-3;
-}
-.container-contact > .contact-4{
-    display: flex;
-    align-items: center;
-    grid-area: contact-4;
-}
-.container-contact > .contact-5{
-    display: flex;
-    align-items: center;
-    grid-area: contact-5;
+.footer-copy{
+    font-size: .875rem;
+    color: rgba(0, 0, 0, 0.6);
 }
 
-.igLogo{
-    width: 60px;
-}
-
-.igUser{
-    color: white;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    padding-left: 5%;
-}
-
-@media screen and (max-width: 780px){
-    footer{
-        height: 50vh;
-    }
-
-    .contactaConNosotros{
-        font-size: 1.5rem;
-    }
-    .container-contact{
-        width: 100%;
+@media screen and (max-width:767px) {
+    .content__footer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        align-items: flex-start;
     }
 }
 
